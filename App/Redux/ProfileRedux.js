@@ -4,7 +4,8 @@ import Immutable from 'seamless-immutable'
 /* ------------- Initial State ------------- */
 
 export const INITIAL_STATE = Immutable({
-  name: 'Clayton'
+  name: 'Clayton',
+  company: 'Shift Interactive'
 })
 
 /* ------------- Types and Action Creators ------------- */

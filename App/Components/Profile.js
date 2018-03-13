@@ -1,10 +1,23 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { View, Text, Image} from 'react-native'
 
 // Styles
 import Styles from './Styles/ProfileStyles'
 
 export default class ProfileScreen extends Component {
+  static propTypes = {
+    name: PropTypes.string,
+    company: PropTypes.string
+  }
+
+  constructor (props) {
+    super(props)
+    this.state = {
+      name: props.name,
+      company: props.company
+    }
+  }
 
   render () {
     return (
@@ -15,11 +28,11 @@ export default class ProfileScreen extends Component {
           </View>
           <View style={Styles.infoContainer}>
             <View style={Styles.nameContainer}>
-              <Text>Clayton</Text>
+              <Text>{this.props.name}</Text>
             </View>
             <View style={Styles.companyContainer}>
               <Text>
-                Shift <Text style={Styles.blueText}>Interactive</Text>
+                {this.props.company}
               </Text>
             </View>
           </View>

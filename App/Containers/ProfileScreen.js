@@ -2,18 +2,15 @@
 import { connect } from 'react-redux'
 import Profile from '../Components/Profile'
 
-// Actions
-import ProfileActions from '../Redux/ProfileRedux'
-
 const mapStateToProps = (state) => {
   return {
-    name: state.profile.name
+    name: state.profile.name,
+    company: state.profile.company
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = () => {
   return {
-    changeName: (name) => { dispatch(ProfileActions.changeName(name)) }
   }
 }
 
