@@ -1,6 +1,12 @@
 import { createReducer, createActions } from 'reduxsauce'
 import Immutable from 'seamless-immutable'
 
+/* ------------- Initial State ------------- */
+
+export const INITIAL_STATE = Immutable({
+  name: 'Clayton'
+})
+
 /* ------------- Types and Action Creators ------------- */
 
 const { Types, Creators } = createActions({
@@ -9,12 +15,6 @@ const { Types, Creators } = createActions({
 
 export const ProfileTypes = Types
 export default Creators
-
-/* ------------- Initial State ------------- */
-
-export const INITIAL_STATE = Immutable({
-  name: 'Clayton'
-})
 
 /* ------------- Reducers ------------- */
 

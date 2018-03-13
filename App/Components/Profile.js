@@ -20,11 +20,10 @@ export default class ProfileScreen extends Component {
   }
 
   render () {
-    const { name } = this.props
     return (
       <View>
-        <Text>{name}</Text>
         <PrimaryButton onPress={() => this.props.changeName('Test2')} text={'SUBMIT'} />
+        <Text>{this.props.name}</Text>
       </View>
     )
   }
