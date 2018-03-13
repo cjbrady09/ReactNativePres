@@ -8,5 +8,17 @@ export default StyleSheet.create({
   },
   blueText: {
     color: '#00f'
-  }
+  },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative'
+  },
+  canvas: {
+    width: 150,
+    height: 200,
+    resizeMode: 'cover',
+    flexShrink: 1
+  },
 })
