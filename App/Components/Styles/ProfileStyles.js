@@ -4,6 +4,7 @@ import { Fonts, Colors, Metrics } from '../../Themes/'
 export default StyleSheet.create({
   mainContainer: {
     flex: 1,
+    backgroundColor: Colors.background,
     flexDirection: 'column'
   },
   profileSection: {
@@ -45,8 +46,26 @@ export default StyleSheet.create({
   },
   canvas: {
     width: 150,
-    height: 200,
+    height: 180,
     resizeMode: 'cover',
     flexShrink: 1
   },
+  row: {
+    flex: 1,
+    height: 50,
+    backgroundColor: '#fff',
+    marginVertical: Metrics.smallMargin,
+    justifyContent: 'center'
+  },
+  boldLabel: {
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    color: '#000',
+    textAlign: 'center'
+  },
+  label: {
+    textAlign: 'center',
+    color: '#000'
+  },
+  listContent: {}
 })
