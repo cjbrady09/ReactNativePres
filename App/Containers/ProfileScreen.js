@@ -2,6 +2,8 @@
 import { connect } from 'react-redux'
 import Profile from '../Components/Profile'
 
+import ProfileActions from '../Redux/ProfileRedux'
+
 const mapStateToProps = (state) => {
   return {
     name: state.profile.name,
@@ -9,8 +11,9 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = () => {
+const mapDispatchToProps = (dispatch) => {
   return {
+    initializeUser: (name, company) => { dispatch(ProfileActions.initializeUser(name, company)) }
   }
 }
 

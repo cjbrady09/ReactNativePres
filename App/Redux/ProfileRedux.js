@@ -11,7 +11,7 @@ export const INITIAL_STATE = Immutable({
 /* ------------- Types and Action Creators ------------- */
 
 const { Types, Creators } = createActions({
-  changeName: ['name']
+  initializeUser: ['name', 'company']
 })
 
 export const ProfileTypes = Types
@@ -19,11 +19,11 @@ export default Creators
 
 /* ------------- Reducers ------------- */
 
-export const changeName = (state, { name }) =>
-  state.merge({ name })
+export const initializeUser = (state, { name, company }) =>
+  state.merge({ name, company })
 
 /* ------------- Hookup Reducers To Types ------------- */
 
 export const reducer = createReducer(INITIAL_STATE, {
-  [Types.CHANGE_NAME]: changeName
+  [Types.INITIALIZE_USER]: initializeUser
 })
