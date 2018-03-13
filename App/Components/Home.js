@@ -1,6 +1,5 @@
 import React from 'react'
 import { View, Text, FlatList, TouchableOpacity } from 'react-native'
-import { connect } from 'react-redux'
 
 // More info here: https://facebook.github.io/react-native/docs/flatlist.html
 
