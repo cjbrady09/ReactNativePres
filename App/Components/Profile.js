@@ -4,9 +4,12 @@ import { View, Text, Image} from 'react-native'
 
 // Styles
 import Styles from './Styles/ProfileStyles'
-import HomeScreen from "./Home";
 
 export default class ProfileScreen extends Component {
+  static navigationOptions = {
+    title: 'Profile'
+  }
+
   static propTypes = {
     name: PropTypes.string,
     company: PropTypes.string
@@ -14,8 +17,6 @@ export default class ProfileScreen extends Component {
 
   constructor (props) {
     super(props)
-    const params = this.props.navigation.state.params
-    this.props.initializeUser(params.name, params.company)
     this.state = {
       name: props.name,
       company: props.company

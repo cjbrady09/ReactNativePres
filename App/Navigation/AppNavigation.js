@@ -7,7 +7,7 @@ import styles from './Styles/NavigationStyles'
 // Manifest of possible screens
 const PrimaryNav = StackNavigator({
   HomeScreen: { screen: HomeScreen, navigationOptions: {title: 'Home'} },
-  ProfileScreen: { screen: ProfileScreen, navigationOptions: {title: 'Profile'} }
+  ProfileScreen: { screen: ProfileScreen }
 }, {
   // Default config for all screens
   headerMode: 'screen',

@@ -19,15 +19,18 @@ export default class HomeScreen extends React.PureComponent {
     }
   }
 
-  static goToNextScreen(name, company) {
+  static GoToProfile(name, company) {
     const { navigate } = HomeScreen.props.navigation
-    navigate('ProfileScreen', { name: name, company: company })
+    this.props.SetProfile(name, company)
+    navigate('ProfileScreen')
   }
+
+  /* ------------- List ------------- */
 
   renderRow ({item}) {
     return (
       <View style={styles.row}>
-        <TouchableOpacity onPress={() => HomeScreen.goToNextScreen(item.name, item.company)}>
+        <TouchableOpacity onPress={() => HomeScreen.GoToProfile(item.name, item.company)}>
           <Text style={styles.boldLabel}>{item.name}</Text>
           <Text style={styles.label}>{item.company}</Text>
         </TouchableOpacity>
